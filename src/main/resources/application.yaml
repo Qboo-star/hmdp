@@ -4,14 +4,15 @@ spring:
   application:
     name: hmdp
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123
   redis:
-    host: 192.168.150.101
+    host: 127.0.0.1
     port: 6379
-    password: 123321
+    # 本机 Redis 默认无密码；若你的 Redis 设置了密码，请取消下行注释并填写
+    # password: 123321
     lettuce:
       pool:
         max-active: 10
